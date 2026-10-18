@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "KINETIX Field Lens",
+    "slug": "kinetix-field-lens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "kinetix",
+    "userInterfaceStyle": "light",
+    "plugins": ["expo-router", "expo-camera"]
+  }
+}
