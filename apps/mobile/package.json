@@ -1,0 +1,28 @@
+{
+  "name": "@kinetix/mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetix/shared": "workspace:*",
+    "@supabase/supabase-js": "^2.47.10",
+    "expo": "~52.0.0",
+    "expo-camera": "~16.0.0",
+    "expo-haptics": "~14.0.0",
+    "expo-router": "~4.0.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "~18.3.12",
+    "typescript": "^5.7.2"
+  }
+}
