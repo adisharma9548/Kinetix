@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-instrument-serif: "Instrument Serif", Georgia, serif;
+  --font-plus-jakarta: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", "Courier New", monospace;
+  --bg-paper: #F4F1EA;
+  --bg-stone: #EAE5D9;
+  --ink: #111110;
+  --signal: #FF4F00;
+  --cobalt: #0047FF;
+  --ledger: #0F766E;
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  font-feature-settings: "ss01" on, "ss02" on;
+  overflow-x: hidden;
+}
+
+/* Architectural 24px technical drafting dot grid */
+.swiss-grid-bg {
+  background-image: radial-gradient(#111110 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Mechanical button depression physics */
+.tactile-btn {
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tactile-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111110 !important;
+}
+
+/* Print-specific rules for Swiss Thermal Receipt export */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #kinetix-printable-receipt,
+  #kinetix-printable-receipt * {
+    visibility: visible;
+  }
+  #kinetix-printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: 2px solid #111110 !important;
+  }
+}
